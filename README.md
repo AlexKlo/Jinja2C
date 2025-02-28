@@ -33,7 +33,26 @@ cmake --build . --parallel ${nproc}
 After building, you can install Jinja2C using:
 
 ```
-cmake --build .
+cmake --install .
 ```
 
-By default, this will install Jinja2C in `/usr/local/`. You can change the installation prefix by adding `-DCMAKE_INSTALL_PREFIX=/your/install/path` to the cmake command.
+By default, this will install Jinja2C in `/usr/local/` and headers in `/usr/local/include/jinja2cppwrapper`. You can change the installation prefix by adding `-DCMAKE_INSTALL_PREFIX=/your/install/path` to the cmake command.
+
+# Usage
+
+To use **jinja2cppwrapper** in your C project, include `jinja2cpp_wrap.h` and link against `ljinja2cppwrapper`.
+
+## Example
+
+The following example from `examples/` demonstrates how to compile a program using **jinja2cppwrapper**:
+
+```sh
+g++ -std=c++14 -o simple_example simple_example.c -I/path/to/include -L/path/to/lib -ljinja2cppwrapper
+```
+
+### Notes:
+- Replace `/path/to/include` with the directory where the header files are installed.
+- Replace `/path/to/lib` with the directory where the compiled library is located.
+
+
+

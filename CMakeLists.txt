@@ -18,8 +18,11 @@ include_directories(${JINJA2CPP_INCLUDE_DIR})
 add_library(jinja2cppwrapper SHARED)
 
 file(GLOB_RECURSE SOURCES src/*.cpp)
+
 target_sources(jinja2cppwrapper PRIVATE ${SOURCES})
 
 target_link_libraries(jinja2cppwrapper PRIVATE ${JINJA2CPP_LIBRARY})
 
 install(TARGETS jinja2cppwrapper LIBRARY DESTINATION lib)
+
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION include/jinja2cppwrapper)

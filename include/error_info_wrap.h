@@ -2,15 +2,10 @@
 #define ERROR_INFO_WRAP_H
 
 #ifdef __cplusplus
-#include <jinja2cpp/error_info.h>
-#include <stddef.h>
-
-using jinja2cpp_error_info_t = jinja2::ErrorInfo;
 
 extern "C" {
 #endif
 
-// Определение кода ошибки
 typedef enum jinja2cpp_error_code_t {
     JINJA2CPP_ERROR_UNSPECIFIED = 0,
     JINJA2CPP_ERROR_UNEXPECTED_EXCEPTION = 1,
@@ -48,7 +43,6 @@ typedef enum jinja2cpp_error_code_t {
 } jinja2cpp_error_code_t;
 
 jinja2cpp_error_code_t jinja2cpp_error_info_get_code(const jinja2cpp_error_info_t* error_info);
-
 const char* jinja2cpp_error_info_to_string(const jinja2cpp_error_info_t* error_info);
 
 #ifdef __cplusplus
