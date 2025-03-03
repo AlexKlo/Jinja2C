@@ -17,7 +17,6 @@ void jinja2cpp_result_free_string(jinja2cpp_result_string_t* result) {
 
 void jinja2cpp_result_free_template(jinja2cpp_result_template_t* result) {
     if (!result || !result->ptr) return;
-    delete result->ptr;
     delete result;
 }
 
