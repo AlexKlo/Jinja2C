@@ -1,7 +1,7 @@
 # Jinja2C
 C API for Jinja2Cpp. 
 
-This is the C++ library component of the Jinja2Cpp.jl package.
+This is the C++ library component of the [jinja2cppwrapper_jll.jl](https://github.com/JuliaBinaryWrappers/jinja2cppwrapper_jll.jl) package.
 
 # Prerequisites
 
